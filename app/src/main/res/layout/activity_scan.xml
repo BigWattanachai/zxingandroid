@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.big.zxingandroid.activities.ScanActivity">
+        <com.liuguangqiang.swipeback.SwipeBackLayout
+            android:id="@+id/swipeback_content_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <com.journeyapps.barcodescanner.DecoratedBarcodeView
             android:id="@+id/zxing_barcode_scanner"
             android:layout_width="match_parent"
@@ -14,4 +18,5 @@
             app:zxing_framing_rect_height="300dp"
             app:zxing_framing_rect_width="300dp"
             app:zxing_scanner_layout="@layout/scan_view"/>
+        </com.liuguangqiang.swipeback.SwipeBackLayout>
 </LinearLayout>
