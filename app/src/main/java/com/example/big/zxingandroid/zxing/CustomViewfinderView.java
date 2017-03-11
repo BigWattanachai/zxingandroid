@@ -1,4 +1,4 @@
-package com.example.big.zxingandroid;
+package com.example.big.zxingandroid.zxing;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

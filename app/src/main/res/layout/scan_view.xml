@@ -18,7 +18,7 @@
         android:orientation="vertical"
         />
 
-    <com.example.big.zxingandroid.CustomViewfinderView
+    <com.example.big.zxingandroid.zxing.CustomViewfinderView
         android:id="@+id/zxing_viewfinder_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
