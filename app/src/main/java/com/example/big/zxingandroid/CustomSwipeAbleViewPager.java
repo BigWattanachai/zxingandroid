@@ -9,25 +9,25 @@ import android.view.MotionEvent;
  * Created by BiG on 3/11/2017 AD.
  */
 
-public class CustomSwipableViewPager extends ViewPager {
+public class CustomSwipeAbleViewPager extends ViewPager {
 
   private boolean enabled;
 
-  public CustomSwipableViewPager.OnSetCurrentItem onSetCurrentItem;
+  public CustomSwipeAbleViewPager.OnSetCurrentItem onSetCurrentItem;
 
   public interface OnSetCurrentItem{
     void setCurrentItem(int currentItem);
   }
 
-  public void setOnSetCurrentItem(CustomSwipableViewPager.OnSetCurrentItem onSetCurrentItem){
+  public void setOnSetCurrentItem(CustomSwipeAbleViewPager.OnSetCurrentItem onSetCurrentItem){
     this.onSetCurrentItem = onSetCurrentItem;
   }
 
-  public CustomSwipableViewPager(Context context) {
+  public CustomSwipeAbleViewPager(Context context) {
     super(context);
   }
 
-  public CustomSwipableViewPager(Context context, AttributeSet attrs) {
+  public CustomSwipeAbleViewPager(Context context, AttributeSet attrs) {
     super(context, attrs);
   }
 

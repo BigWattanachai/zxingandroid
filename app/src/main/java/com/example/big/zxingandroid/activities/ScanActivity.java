@@ -63,5 +63,6 @@ public class ScanActivity extends Activity {
     defineDragEdge.put(SwipeBackLayout.DragEdge.RIGHT, MainActivity.class);
     swipeBackLayoutContent.setDefinedDragEdge(defineDragEdge);
     swipeBackLayoutContent.setEnableFlingBack(true);
+
   }
 }
