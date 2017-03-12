@@ -15,6 +15,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 
 public class BarcodeFragment extends Fragment implements BarcodeFragmentInterface {
   protected MainActivity mActivity;
+
   //public BarcodeFragment(Activity activity) {
   //  // Required empty public constructor
   //  mActivity = (MainActivity) activity;
@@ -48,14 +49,14 @@ public class BarcodeFragment extends Fragment implements BarcodeFragmentInterfac
   }
 
   @Override public void startBarCode(Activity activity) {
-    if(activity != null){
+    if (activity != null) {
 
-    IntentIntegrator intentIntegrator =new IntentIntegrator(activity);
-    intentIntegrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
-        .setPrompt("将二维码/条码放入框内，即可自动扫描")
-        .setOrientationLocked(false)
-        .setCaptureActivity(ScanActivity.class)
-        .initiateScan(); // 初始化扫描
+      IntentIntegrator intentIntegrator = new IntentIntegrator(activity);
+      intentIntegrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
+          .setPrompt("将二维码/条码放入框内，即可自动扫描")
+          .setOrientationLocked(false)
+          .setCaptureActivity(ScanActivity.class)
+          .initiateScan(); // 初始化扫描
     }
   }
 }

@@ -15,11 +15,11 @@ public class CustomSwipeAbleViewPager extends ViewPager {
 
   public CustomSwipeAbleViewPager.OnSetCurrentItem onSetCurrentItem;
 
-  public interface OnSetCurrentItem{
+  public interface OnSetCurrentItem {
     void setCurrentItem(int currentItem);
   }
 
-  public void setOnSetCurrentItem(CustomSwipeAbleViewPager.OnSetCurrentItem onSetCurrentItem){
+  public void setOnSetCurrentItem(CustomSwipeAbleViewPager.OnSetCurrentItem onSetCurrentItem) {
     this.onSetCurrentItem = onSetCurrentItem;
   }
 
@@ -31,8 +31,7 @@ public class CustomSwipeAbleViewPager extends ViewPager {
     super(context, attrs);
   }
 
-  @Override
-  public boolean onInterceptTouchEvent(MotionEvent event) {
+  @Override public boolean onInterceptTouchEvent(MotionEvent event) {
 
     if (this.enabled) {
       return super.onInterceptTouchEvent(event);
@@ -42,8 +41,7 @@ public class CustomSwipeAbleViewPager extends ViewPager {
     return false;
   }
 
-  @Override
-  public boolean onTouchEvent(MotionEvent event) {
+  @Override public boolean onTouchEvent(MotionEvent event) {
 
     if (this.enabled) {
       return super.onTouchEvent(event);
@@ -53,12 +51,10 @@ public class CustomSwipeAbleViewPager extends ViewPager {
     return false;
   }
 
-
-  @Override
-  public void setCurrentItem(int item) {
+  @Override public void setCurrentItem(int item) {
     super.setCurrentItem(item);
 
-    if(onSetCurrentItem != null){
+    if (onSetCurrentItem != null) {
       onSetCurrentItem.setCurrentItem(item);
     }
   }

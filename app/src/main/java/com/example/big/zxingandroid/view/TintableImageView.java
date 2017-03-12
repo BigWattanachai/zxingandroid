@@ -29,15 +29,13 @@ public class TintableImageView extends ImageView {
   }
 
   private void init(Context context, AttributeSet attrs, int defStyle) {
-    TypedArray a = context.obtainStyledAttributes(
-        attrs, R.styleable.TintableImageView, defStyle, 0);
-    tint = a.getColorStateList(
-        R.styleable.TintableImageView_tint);
+    TypedArray a =
+        context.obtainStyledAttributes(attrs, R.styleable.TintableImageView, defStyle, 0);
+    tint = a.getColorStateList(R.styleable.TintableImageView_tint);
     a.recycle();
   }
 
-  @Override
-  protected void drawableStateChanged() {
+  @Override protected void drawableStateChanged() {
     super.drawableStateChanged();
     if (tint != null && tint.isStateful()) {
       updateTintColor();
@@ -53,5 +51,4 @@ public class TintableImageView extends ImageView {
     int color = tint.getColorForState(getDrawableState(), 0);
     setColorFilter(color);
   }
-
 }

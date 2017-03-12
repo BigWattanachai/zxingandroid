@@ -1,6 +1,5 @@
 package com.example.big.zxingandroid;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.PagerAdapter;
@@ -18,7 +17,6 @@ import com.example.big.zxingandroid.fragment.BarcodeFragment;
 import com.example.big.zxingandroid.fragment.BarcodeFragmentInterface;
 import com.example.big.zxingandroid.fragment.PageFragment;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 
@@ -36,11 +34,10 @@ public class MainActivity extends AppCompatActivity {
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
     generateHeadMenu();
-    if("android.intent.action.MAIN".equalsIgnoreCase(getIntent().getAction())){
+    if ("android.intent.action.MAIN".equalsIgnoreCase(getIntent().getAction())) {
       viewPager.setCurrentItem(0);
-    }else if(viewPager != null) {
+    } else if (viewPager != null) {
       viewPager.setCurrentItem(2);
-
     }
   }
 

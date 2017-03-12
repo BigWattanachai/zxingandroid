@@ -17,6 +17,7 @@ public class PageFragment extends Fragment {
 
   private static final String TAG = "PageFragment";
   protected MainActivity mActivity;
+
   @Override public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
     return inflater.inflate(R.layout.fragment_page, container, false);
@@ -25,22 +26,14 @@ public class PageFragment extends Fragment {
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     int position = FragmentPagerItem.getPosition(getArguments());
-    System.out.println("================");
-    System.out.println("================");
-    System.out.println(mActivity.getCurrenPageActive());
-    System.out.println("================");
-    System.out.println("================");
-    System.out.println("================");
     Log.d(TAG, "onViewCreated - position: " + position);
 
     TextView title = (TextView) view.findViewById(R.id.item_title);
     title.setText(String.valueOf(position));
   }
 
-  @Override
-  public void onAttach(Activity activity) {
+  @Override public void onAttach(Activity activity) {
     super.onAttach(activity);
     mActivity = (MainActivity) activity;
   }
-
 }
