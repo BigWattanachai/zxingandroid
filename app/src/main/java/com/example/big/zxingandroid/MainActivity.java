@@ -1,5 +1,6 @@
 package com.example.big.zxingandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.PagerAdapter;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.big.zxingandroid.fragment.BarcodeFragment;
@@ -31,11 +33,15 @@ public class MainActivity extends AppCompatActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
     generateHeadMenu();
-    if (viewPager != null) {
+    if("android.intent.action.MAIN".equalsIgnoreCase(getIntent().getAction())){
+      viewPager.setCurrentItem(0);
+    }else if(viewPager != null) {
       viewPager.setCurrentItem(2);
+
     }
-    int position = FragmentPagerItem.getPosition(getIntent().getExtras());
   }
 
   private void generateHeadMenu() {
@@ -105,11 +111,11 @@ public class MainActivity extends AppCompatActivity {
             break;
           case 2:
             icon.setImageDrawable(
-                ResourcesCompat.getDrawable(getResources(), R.drawable.ic_scan, null));
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ic_pay_old, null));
             break;
           case 3:
             icon.setImageDrawable(
-                ResourcesCompat.getDrawable(getResources(), R.drawable.ic_pay_old, null));
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ic_scan_old, null));
             break;
           default:
             throw new IllegalStateException("Invalid position: " + position);

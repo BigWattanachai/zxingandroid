@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ZxingAndroid.iml" filepath="$PROJECT_DIR$/ZxingAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/swipeback-1.0.4/swipeback-1.0.4.iml" filepath="$PROJECT_DIR$/swipeback-1.0.4/swipeback-1.0.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxingandroid.iml" filepath="$PROJECT_DIR$/zxingandroid.iml" />
     </modules>
   </component>
 </project>

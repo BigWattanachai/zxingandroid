@@ -3,6 +3,7 @@ package com.example.big.zxingandroid.zxing;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Rect;
 import android.graphics.Shader;
@@ -38,7 +39,7 @@ public class CustomViewfinderView extends ViewfinderView {
     int width = canvas.getWidth();
     int height = canvas.getHeight();
 
-    paint.setColor(0xFFFFFFFF);
+    paint.setColor(Color.parseColor("#ff8300"));
     canvas.drawRect(frame.left, frame.top, frame.left + 70, frame.top + 10, paint);
     canvas.drawRect(frame.left, frame.top, frame.left + 10, frame.top + 70, paint);
 
