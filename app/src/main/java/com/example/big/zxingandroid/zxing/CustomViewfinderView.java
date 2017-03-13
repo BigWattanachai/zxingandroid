@@ -39,18 +39,18 @@ public class CustomViewfinderView extends ViewfinderView {
     int width = canvas.getWidth();
     int height = canvas.getHeight();
 
-    paint.setColor(Color.parseColor("#ff8300"));
-    canvas.drawRect(frame.left, frame.top, frame.left + 70, frame.top + 10, paint);
-    canvas.drawRect(frame.left, frame.top, frame.left + 10, frame.top + 70, paint);
+    paint.setColor(resultColor);
+    canvas.drawRect(frame.left, frame.top, frame.left + 75, frame.top + 7, paint);
+    canvas.drawRect(frame.left, frame.top, frame.left + 7, frame.top + 75, paint);
 
-    canvas.drawRect(frame.right - 70, frame.top, frame.right, frame.top + 10, paint);
-    canvas.drawRect(frame.right - 10, frame.top, frame.right, frame.top + 70, paint);
+    canvas.drawRect(frame.right - 75, frame.top, frame.right, frame.top + 7, paint);
+    canvas.drawRect(frame.right - 7, frame.top, frame.right, frame.top + 75, paint);
 
-    canvas.drawRect(frame.left, frame.bottom - 10, frame.left + 70, frame.bottom, paint);
-    canvas.drawRect(frame.left, frame.bottom - 70, frame.left + 10, frame.bottom, paint);
+    canvas.drawRect(frame.left, frame.bottom - 7, frame.left + 75, frame.bottom, paint);
+    canvas.drawRect(frame.left, frame.bottom - 75, frame.left + 7, frame.bottom, paint);
 
-    canvas.drawRect(frame.right - 70, frame.bottom - 10, frame.right, frame.bottom, paint);
-    canvas.drawRect(frame.right - 10, frame.bottom - 70, frame.right, frame.bottom, paint);
+    canvas.drawRect(frame.right - 75, frame.bottom - 7, frame.right, frame.bottom, paint);
+    canvas.drawRect(frame.right - 7, frame.bottom - 75, frame.right, frame.bottom, paint);
     // Draw the exterior (i.e. outside the framing rect) darkened
     paint.setColor(resultBitmap != null ? resultColor : maskColor);
     canvas.drawRect(0, 0, width, frame.top, paint);
